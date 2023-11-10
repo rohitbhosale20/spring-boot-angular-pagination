@@ -22,7 +22,7 @@ export class PeopleComponent implements OnInit {
   loadData() {
     this.service.getAllData(this.currentPage, this.pageSize, this.jobTitles).subscribe((res: any) => {
       console.log(res, "Get all data");
-      this.dataList = res.content; // Assuming your data is in the 'content' property
+      this.dataList = res; // Assuming your data is in the 'content' property
     });
   }
 

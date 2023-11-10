@@ -33,9 +33,7 @@
               </li>
            
           </ul>
-          <!-- Tabs navs -->
-          
-          <!-- Tabs content -->
+         
           <div class="tab-content" id="ex1-content">
             <div
               class="tab-pane fade show active"
@@ -53,6 +51,11 @@
     <div class="maincontent col-6 shadow">
       <div class="container">
         <h1>Data List</h1>
+        <div>
+          <button (click)="previousPage()">Previous</button>
+          <span>{{ currentPage + 1 }}</span>
+          <button (click)="nextPage()">Next</button>
+        </div>
         <table class="table">
           <thead>
             <tr>
@@ -63,18 +66,7 @@
                   <th>company_name    </th>
                   <th>company_domain  </th>
                   <th>job_title   </th>
-                  <th>job_function    </th>
-                  <th>job_level   </th>
-                  <th>Company_Address </th>
-                  <th>city    </th>
-                  <th>State   </th>
-                  <th>Zip_Code    </th>
-                  <th>country </th>
-                  <th>Telephone_Number    </th>
-                  <th>Employee_Size   </th>
-                  <th>Industry    </th>
-                  <th>Company_Link    </th>
-                  <th>Prospect_Link</th>
+               
                 
               
     
@@ -89,28 +81,13 @@
                  <td>{{ item.company_Name   }}</td>
                  <td>{{ item.company_Domain  }}</td>
                  <td>{{ item.job_Title   }}</td>
-                 <td>{{ item.job_Function }}</td>
-                 <td>{{ item.job_Level   }}</td>
-                 <td>{{ item.company_Address  }}</td>
-                 <td>{{ item.zip_Code  }}</td>
-                 <td>{{ item.state  }}</td>
-                 <td>{{ item.zip_Code }}</td>
-                 <td>{{ item.country  }}</td>
-                 <td>{{ item.telephone_Number }}</td>
-                 <td>{{ item.employee_Size }}</td>
-                 <td>{{ item.industry  }}</td>
-                 <td>{{ item.company_Link  }}</td>
-                 <td>{{ item.prospect_Link }}</td>
+                
                 
     
             </tr>
           </tbody>
         </table>
-        <div>
-        <button (click)="previousPage()">Previous</button>
-        <span>{{ currentPage + 1 }}</span>
-        <button (click)="nextPage()">Next</button>
-      </div>
+       
       </div>
       
         
