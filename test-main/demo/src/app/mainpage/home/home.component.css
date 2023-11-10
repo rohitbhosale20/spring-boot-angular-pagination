@@ -1,0 +1,23 @@
+.mat-sidenav-container{
+   height: 1000px;
+   
+  
+}
+.mat-sidenav{
+    width: 100px; 
+    padding-left:43px ;
+    padding-top:50px ;
+    padding-right: 10px;
+    padding-bottom: 50px;
+}
+
+
+.image{
+    height: 10px;
+   
+}
+
+.form-inline{
+    padding-left: 915px;
+}
+mat-sidenav-content{}

@@ -1,0 +1,117 @@
+
+<div class="row">
+
+
+
+
+
+    <div class="sidebar col-2 shadow">
+        <ul class="nav mb-3" id="ex1" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link active"
+                id="ex1-tab-1"
+                data-mdb-toggle="tab"
+        routerLink="left/filter"
+                role="tab"
+                aria-controls="ex1-tabs-1"
+                aria-selected="true"
+                >Search</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  id="ex1-tab-1"
+                  data-mdb-toggle="tab"
+          routerLink="left/savedSearches"
+                  role="tab"
+                  aria-controls="ex1-tabs-1"
+                  aria-selected="true"
+                  >Saved seraches</a
+                >
+              </li>
+           
+          </ul>
+          <!-- Tabs navs -->
+          
+          <!-- Tabs content -->
+          <div class="tab-content" id="ex1-content">
+            <div
+              class="tab-pane fade show active"
+              id="ex1-tabs-1"
+              role="tabpanel"
+              aria-labelledby="ex1-tab-1"
+            >
+            <ng-container *ngIf="isPeopleRoute()">
+              <router-outlet></router-outlet>
+            </ng-container>
+            </div>
+          
+          </div>
+</div>
+    <div class="maincontent col-6 shadow">
+      <div class="container">
+        <h1>Data List</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID  </th>
+                <th>First_Name  </th>
+                  <th>last_name   </th>
+                  <th>email_address   </th>
+                  <th>company_name    </th>
+                  <th>company_domain  </th>
+                  <th>job_title   </th>
+                  <th>job_function    </th>
+                  <th>job_level   </th>
+                  <th>Company_Address </th>
+                  <th>city    </th>
+                  <th>State   </th>
+                  <th>Zip_Code    </th>
+                  <th>country </th>
+                  <th>Telephone_Number    </th>
+                  <th>Employee_Size   </th>
+                  <th>Industry    </th>
+                  <th>Company_Link    </th>
+                  <th>Prospect_Link</th>
+                
+              
+    
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of dataList">
+              <td>{{ item.id }}</td>
+                 <td>{{ item.first_Name }}</td>
+                 <td>{{ item.last_Name  }}</td>
+                 <td>{{ item.email_Address  }}</td>
+                 <td>{{ item.company_Name   }}</td>
+                 <td>{{ item.company_Domain  }}</td>
+                 <td>{{ item.job_Title   }}</td>
+                 <td>{{ item.job_Function }}</td>
+                 <td>{{ item.job_Level   }}</td>
+                 <td>{{ item.company_Address  }}</td>
+                 <td>{{ item.zip_Code  }}</td>
+                 <td>{{ item.state  }}</td>
+                 <td>{{ item.zip_Code }}</td>
+                 <td>{{ item.country  }}</td>
+                 <td>{{ item.telephone_Number }}</td>
+                 <td>{{ item.employee_Size }}</td>
+                 <td>{{ item.industry  }}</td>
+                 <td>{{ item.company_Link  }}</td>
+                 <td>{{ item.prospect_Link }}</td>
+                
+    
+            </tr>
+          </tbody>
+        </table>
+        <div>
+        <button (click)="previousPage()">Previous</button>
+        <span>{{ currentPage + 1 }}</span>
+        <button (click)="nextPage()">Next</button>
+      </div>
+      </div>
+      
+        
+</div>
